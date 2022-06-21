@@ -7,20 +7,21 @@ import Signup from "./components/Signup";
 
 export default ({ history, onSignIn }) => {
   return (
-    <div style={{borderWidth:5,borderColor:'#eee',borderStyle:'ridge'}}>
-        <Router history={history}>
-          <Switch>
-            <Route path="/signin">
-              <Signin onSignIn={onSignIn} />
-            </Route>
-            <Route path="/signup">
-              <Signup onSignIn={onSignIn} />
-            </Route>
-            <Route path="/">
-              <Home onSignIn={onSignIn} />
-            </Route>
-          </Switch>
-        </Router>
+    <div style={{ borderWidth: 5, borderColor: "#eee", borderStyle: "ridge" }}>
+      路由
+      <Router history={history}>
+        <Switch>
+          <Route path="/signin">
+            <Signin onSignIn={onSignIn} />
+          </Route>
+          <Route path="/signup">
+            <Signup onSignIn={onSignIn} />
+          </Route>
+          <Route path="/">
+            <Home onSignIn={onSignIn} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 };

@@ -14,6 +14,7 @@ export default {
   },
   mounted() {
     this.initialPath = this.$route.matched[0].path;
+    console.log(this.initialPath, "initialPath");
     const { onParentNavigate } = mount(document.getElementById("react"), {
       initialPath: this.initialPath,
       onNavigate: ({ pathname: nextPathname }) => {
@@ -40,9 +41,9 @@ export default {
         this.iswatch
       );
       if (this.iswatch) {
-        if(innerRoute)
-        this.onParentNavigate(innerRoute);
-        else return true
+        console.log(this.iswatch, "this.iswatch");
+        if (innerRoute) this.onParentNavigate(innerRoute);
+        else return true;
       } else this.iswatch = true;
     },
   },
